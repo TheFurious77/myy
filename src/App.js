@@ -1,14 +1,14 @@
 import './App.css';
 import Navbar from './components/Navbar';
 import TextForm from './components/TextForm';
-// import About from './components/About';
+import About from './components/About';
 import Alert from './components/Alert';
 import React,{useState} from 'react';
-// import {
-//   BrowserRouter as Router,
-//  Routes,
-//   Route
-// } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+ Routes,
+  Route
+} from "react-router-dom";
 
 
 function App() {
@@ -41,19 +41,19 @@ function App() {
   }
   return (
     <>
-    {/* <Router> */}
+    <Router>
     <Navbar title="Utils" aboutText="Among Us" mode={mode} toggle={toggle}/>
     <Alert alert={alert}/>
     <div className="container my-3">
 
-    /<TextForm showAlert={showAlert} heading="Write What you Believe is True" mode={mode}/>
-    {/* <Routes>
+    {/* /<TextForm showAlert={showAlert} heading="Write What you Believe is True" mode={mode}/> */}
+    <Routes>
       <Route path="/about" element={<About mode={mode}/>}/>
-      {/* <Route path='/' element={<TextForm showAlert={showAlert} heading="Write What you Believe is True" mode={mode}/>}/> */}
-      {/* <Route path='/' element={<TextForm showAlert={showAlert} heading="Write What you Believe is True" mode={mode}/>}/> */}
-    {/* </Routes> */}
+      <Route path='/' element={<TextForm showAlert={showAlert} heading="Write What you Believe is True" mode={mode}/>}/>
+      <Route path='/' element={<TextForm showAlert={showAlert} heading="Write What you Believe is True" mode={mode}/>}/>
+    </Routes>
     </div>
-    {/* </Router> */}
+    </Router>
     
     
         </>
